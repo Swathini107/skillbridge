@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Python Virtual Environments
+venv/
+*/venv/
+.venv/
+*/.venv/
+env/
+*/env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*/__pycache__/
+*/**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Databases & Storage
+*.db
+*.sqlite
+*.sqlite3
+backend/skillbridge.db
+
+# Build Artifacts
+dist/
+*/dist/
+build/
+*/build/
+*.egg-info/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# SQLite journal files and local backups
+*.db-wal
+*.db-shm
+*.sqlite-wal
+*.sqlite-shm
+*_backup*.db
+restore_test.db
+test_skillbridge*.db

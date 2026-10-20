@@ -1,13 +1,13 @@
 """
-SkillBridge Days 6 & 7 Integration Test Suite
+SkillBridge Integration Test Suite
 Complete Multi-Module End-to-End Workflow Verification:
 
-1. Save a new Job Application (Day 2 Job Saver)
-2. Run Job Description Analyzer with skill extraction & gap analysis (Day 3 Analyzer)
+1. Save a new Job Application (Job Saver)
+2. Run Job Description Analyzer with skill extraction & gap analysis (Job Analyzer)
 3. Save analysis to history and verify persistence
-4. Save an Interview Question linked to the Job (Day 4 Memory Bank)
+4. Save an Interview Question linked to the Job (Memory Bank)
 5. Filter questions by company and linked job ID
-6. Start a Mock Practice Session targeting the Job (Day 5 Practice Studio)
+6. Start a Mock Practice Session targeting the Job (Practice Studio)
 7. Save answer, self-assessment ratings, and reflection
 8. Finish practice session and verify transparent session report
 9. Verify Dashboard summary reflects updated jobs, questions, and session metrics
@@ -56,7 +56,7 @@ class TestFullProductIntegrationWorkflow(unittest.TestCase):
         initial_sess_count = init_cards["sessions_completed"]
 
         # -------------------------------------------------------------
-        # STEP 2: Save a new job application (Day 2 Module)
+        # STEP 2: Save a new job application (Job Tracker Module)
         # -------------------------------------------------------------
         new_job_payload = {
             "company_name": "CloudScale Systems",
@@ -79,7 +79,7 @@ class TestFullProductIntegrationWorkflow(unittest.TestCase):
         self.assertEqual(created_job["company_name"], "CloudScale Systems")
 
         # -------------------------------------------------------------
-        # STEP 3: Analyze Job Description for this job (Day 3 Module)
+        # STEP 3: Analyze Job Description for this job (Job Analyzer Module)
         # -------------------------------------------------------------
         jd_text = """
         About CloudScale:
@@ -125,7 +125,7 @@ class TestFullProductIntegrationWorkflow(unittest.TestCase):
         self.assertEqual(found_hist["company_name"], "CloudScale Systems")
 
         # -------------------------------------------------------------
-        # STEP 4: Save an Interview Question linked to the Job (Day 4 Module)
+        # STEP 4: Save an Interview Question linked to the Job (Memory Bank Module)
         # -------------------------------------------------------------
         question_payload = {
             "question_text": "How do database connection pools work in SQLAlchemy, and why is pool_pre_ping important?",
@@ -154,7 +154,7 @@ class TestFullProductIntegrationWorkflow(unittest.TestCase):
         self.assertEqual(filtered_questions[0]["id"], question_id)
 
         # -------------------------------------------------------------
-        # STEP 5: Start a Mock Interview Session targeting this Job (Day 5 Module)
+        # STEP 5: Start a Mock Interview Session targeting this Job (Practice Studio Module)
         # -------------------------------------------------------------
         session_payload = {
             "session_name": "CloudScale Systems — Technical Interview Round",

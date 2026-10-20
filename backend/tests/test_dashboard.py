@@ -1,5 +1,5 @@
 """
-SkillBridge Day 6 & 7 Test Suite - Unified Career Preparation Dashboard
+SkillBridge Test Suite - Unified Career Preparation Dashboard
 Verifies:
 1. Complete dashboard summary response structure and types
 2. Summary card calculations (live jobs, question mastery, mock sessions)

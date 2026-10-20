@@ -227,9 +227,9 @@ export default function Dashboard() {
       <section className="dashboard-card">
         <div className="dashboard-card-header">
           <div className="dashboard-card-title">
-            <TrendingUp size={18} color="#2563eb" /> Application Pipeline Funnel
+            <TrendingUp size={18} color="var(--primary)" /> Application Pipeline Funnel
           </div>
-          <span style={{ fontSize: '0.8rem', color: '#64748b' }}>
+          <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
             Total Pipeline: {cards.total_jobs} Opportunities
           </span>
         </div>
@@ -252,7 +252,7 @@ export default function Dashboard() {
           </div>
 
           <div className="funnel-outcomes-row">
-            <span style={{ fontSize: '0.75rem', color: '#64748b', alignSelf: 'center', marginRight: '0.25rem' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', alignSelf: 'center', marginRight: '0.25rem' }}>
               Final Outcomes:
             </span>
             {dashboardData?.application_funnel?.outcomes?.map((outcome) => (
@@ -340,13 +340,13 @@ export default function Dashboard() {
               </button>
             </div>
 
-            <p style={{ fontSize: '0.78rem', color: '#64748b', margin: '-0.5rem 0 0.5rem 0' }}>
+            <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', margin: '-0.5rem 0 0.5rem 0' }}>
               Aggregated from {dashboardData?.skill_gap_summary?.total_analyses || 0} saved job description analyses.
             </p>
 
             {dashboardData?.skill_gap_summary?.frequently_missing_required?.length > 0 ? (
               <div className="skill-gap-list">
-                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#334155' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
                   Frequently Missing Required Skills:
                 </span>
                 {dashboardData.skill_gap_summary.frequently_missing_required.slice(0, 3).map((gap) => (
@@ -370,7 +370,7 @@ export default function Dashboard() {
 
                 {dashboardData?.skill_gap_summary?.suggested_learning_tasks?.length > 0 && (
                   <div className="learning-tasks-list">
-                    <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#334155', marginTop: '0.25rem' }}>
+                    <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
                       Recommended Action:
                     </span>
                     <div className="learning-task-card">
@@ -413,15 +413,15 @@ export default function Dashboard() {
             {/* Questions Mastery Ratio */}
             <div className="prep-mastery-strip">
               <div className="mastery-stat-item">
-                <h5 style={{ color: '#059669' }}>{cards.questions_confident}</h5>
+                <h5 style={{ color: 'var(--primary)' }}>{cards.questions_confident}</h5>
                 <p>Confident</p>
               </div>
               <div className="mastery-stat-item">
-                <h5 style={{ color: '#b45309' }}>{cards.questions_learning}</h5>
+                <h5 style={{ color: 'var(--warning)' }}>{cards.questions_learning}</h5>
                 <p>Learning / New</p>
               </div>
               <div className="mastery-stat-item">
-                <h5 style={{ color: '#2563eb' }}>{cards.total_questions_saved}</h5>
+                <h5 style={{ color: 'var(--secondary)' }}>{cards.total_questions_saved}</h5>
                 <p>Total Saved</p>
               </div>
             </div>
@@ -430,13 +430,13 @@ export default function Dashboard() {
             {dashboardData?.interview_prep_summary?.active_session_to_resume && (
               <div className="resume-session-banner">
                 <div>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: '#2563eb', textTransform: 'uppercase' }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase' }}>
                     In-Progress Interview Session
                   </div>
-                  <strong style={{ fontSize: '0.9rem', color: '#0f172a' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--text-main)' }}>
                     {dashboardData.interview_prep_summary.active_session_to_resume.session_name}
                   </strong>
-                  <div style={{ fontSize: '0.78rem', color: '#64748b' }}>
+                  <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                     Paused on Question {dashboardData.interview_prep_summary.active_session_to_resume.current_index + 1} of {dashboardData.interview_prep_summary.active_session_to_resume.total_questions} ({dashboardData.interview_prep_summary.active_session_to_resume.round_type})
                   </div>
                 </div>
@@ -475,7 +475,7 @@ export default function Dashboard() {
             {/* Recent Practice Sessions */}
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: '#334155' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-secondary)' }}>
                   Recent Mock Sessions:
                 </span>
                 <button
@@ -497,15 +497,15 @@ export default function Dashboard() {
                         justifyContent: 'space-between',
                         alignItems: 'center',
                         padding: '0.6rem 0.75rem',
-                        background: '#f8fafc',
-                        border: '1px solid #e2e8f0',
+                        background: 'var(--bg-subtle)',
+                        border: '1px solid var(--border-subtle)',
                         borderRadius: '6px',
                         fontSize: '0.825rem'
                       }}
                     >
                       <div>
                         <strong>{session.session_name}</strong>
-                        <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                           {session.round_type} &bull; {session.attempted_count}/{session.total_questions} answered &bull; {session.date}
                         </div>
                       </div>
@@ -516,7 +516,7 @@ export default function Dashboard() {
                   ))}
                 </div>
               ) : (
-                <div style={{ textAlign: 'center', padding: '1.25rem', color: '#64748b', fontSize: '0.825rem' }}>
+                <div style={{ textAlign: 'center', padding: '1.25rem', color: 'var(--text-muted)', fontSize: '0.825rem' }}>
                   <Mic size={20} style={{ opacity: 0.5, marginBottom: '0.25rem' }} />
                   <p>No mock sessions run yet. Rehearse real interview rounds under timed conditions.</p>
                 </div>
@@ -530,7 +530,7 @@ export default function Dashboard() {
       <section className="dashboard-card" style={{ marginBottom: '1.5rem' }}>
         <div className="dashboard-card-header">
           <div className="dashboard-card-title">
-            <FileText size={18} color="#4f46e5" /> ATS Resume Management
+            <FileText size={18} color="var(--primary)" /> ATS Resume Management
           </div>
           <button
             className="dashboard-card-action-link"
@@ -544,21 +544,21 @@ export default function Dashboard() {
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '1rem', padding: '0.5rem 0' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
-                <strong style={{ fontSize: '1.05rem', color: '#0f172a' }}>
+                <strong style={{ fontSize: '1.05rem', color: 'var(--text-main)' }}>
                   {dashboardData.resume_overview.most_recent_resume.title}
                 </strong>
                 {dashboardData.resume_overview.most_recent_resume.target_role && (
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, background: '#eef2ff', color: '#4f46e5', padding: '0.2rem 0.6rem', borderRadius: '999px' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 600, background: 'var(--primary-light)', color: 'var(--primary)', padding: '0.2rem 0.6rem', borderRadius: '999px' }}>
                     {dashboardData.resume_overview.most_recent_resume.target_role}
                   </span>
                 )}
                 {dashboardData.resume_overview.most_recent_resume.target_company && (
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, background: '#f0fdf4', color: '#166534', padding: '0.2rem 0.6rem', borderRadius: '999px' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 600, background: 'var(--secondary-light)', color: 'var(--secondary)', padding: '0.2rem 0.6rem', borderRadius: '999px' }}>
                     Tailored for {dashboardData.resume_overview.most_recent_resume.target_company}
                   </span>
                 )}
               </div>
-              <div style={{ fontSize: '0.825rem', color: '#64748b' }}>
+              <div style={{ fontSize: '0.825rem', color: 'var(--text-muted)' }}>
                 Saved Drafts: <strong>{dashboardData.resume_overview.total_resumes}</strong> &bull;{' '}
                 Completeness Score: <strong>{dashboardData.resume_overview.most_recent_resume.completeness_score || 0}/100</strong> &bull;{' '}
                 {dashboardData.resume_overview.most_recent_resume.has_unresolved_warnings ? (
@@ -583,7 +583,7 @@ export default function Dashboard() {
               </button>
               <button
                 className="btn-secondary"
-                style={{ padding: '0.45rem 0.85rem', fontSize: '0.825rem', background: '#f1f5f9', color: '#334155' }}
+                style={{ padding: '0.45rem 0.85rem', fontSize: '0.825rem', background: 'var(--bg-subtle)', color: 'var(--text-secondary)' }}
                 onClick={() => navigate(`/resume-builder?id=${dashboardData.resume_overview.most_recent_resume.id}&tab=review`)}
               >
                 Review Quality
@@ -591,7 +591,7 @@ export default function Dashboard() {
               {dashboardData.resume_overview.most_recent_resume.target_job_id && (
                 <button
                   className="btn-secondary"
-                  style={{ padding: '0.45rem 0.85rem', fontSize: '0.825rem', background: '#eef2ff', color: '#4f46e5' }}
+                  style={{ padding: '0.45rem 0.85rem', fontSize: '0.825rem', background: 'var(--primary-light)', color: 'var(--primary)' }}
                   onClick={() => navigate(`/applications?search=${encodeURIComponent(dashboardData.resume_overview.most_recent_resume.target_company || '')}`)}
                 >
                   View Target Job

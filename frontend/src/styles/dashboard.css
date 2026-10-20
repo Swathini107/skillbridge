@@ -9,12 +9,12 @@
 /* 1. Welcome Section */
 .welcome-hero {
   position: relative;
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
+  background: var(--banner-bg);
   color: #ffffff;
   border-radius: var(--radius-xl);
   padding: 2.25rem 2.5rem;
   overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(67, 56, 202, 0.25);
+  box-shadow: 0 10px 25px -5px rgba(6, 78, 59, 0.25);
 }
 
 .welcome-hero::after {
@@ -25,7 +25,7 @@
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(99, 102, 241, 0) 70%);
+  background: var(--banner-glow);
   pointer-events: none;
 }
 
@@ -55,7 +55,7 @@
 
 .welcome-subtitle {
   font-size: 1.05rem;
-  color: #c7d2fe;
+  color: var(--banner-text-subtle);
   max-width: 600px;
   line-height: 1.5;
 }
@@ -344,7 +344,7 @@
 
 .roadmap-step.active {
   background: var(--primary-light);
-  border-color: #c7d2fe;
+  border-color: var(--primary-border);
 }
 
 .roadmap-step-day {
@@ -376,7 +376,7 @@
 }
 
 /* ==========================================================================
-   DAYS 6 & 7: UNIFIED CAREER PREPARATION DASHBOARD EXTENSIONS
+   UNIFIED CAREER PREPARATION DASHBOARD EXTENSIONS
    ========================================================================== */
 
 /* 2-Column Responsive Dashboard Split */
@@ -520,18 +520,18 @@
 }
 
 .deadline-row-card:hover {
-  background: #f1f5f9;
+  background: var(--bg-hover);
 }
 
 .deadline-info h4 {
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--text-main, #0f172a);
+  color: var(--text-main);
 }
 
 .deadline-info p {
   font-size: 0.8rem;
-  color: var(--text-secondary, #475569);
+  color: var(--text-secondary);
 }
 
 .deadline-meta {
@@ -546,34 +546,34 @@
   align-items: center;
   gap: 0.25rem;
   padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-full, 999px);
+  border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .urgency-badge.overdue {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  color: #b91c1c;
+  background: var(--danger-light);
+  border: 1px solid var(--danger-border);
+  color: var(--danger-text);
 }
 
 .urgency-badge.urgent {
-  background: #fffbeb;
-  border: 1px solid #fef3c7;
-  color: #b45309;
+  background: var(--warning-light);
+  border: 1px solid var(--warning-border);
+  color: var(--warning-text);
 }
 
 .urgency-badge.soon {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  color: #1d4ed8;
+  background: var(--info-light);
+  border: 1px solid var(--info-border);
+  color: var(--info-text);
 }
 
 .urgency-badge.upcoming {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: #475569;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
 }
 
 /* Skill Gaps Overview */
@@ -588,20 +588,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.6rem 0.85rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
 }
 
 .skill-name-tag {
   font-weight: 700;
-  color: #4338ca;
+  color: var(--primary);
 }
 
 .skill-job-chips {
   font-size: 0.75rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin-top: 0.15rem;
 }
 
@@ -613,12 +613,12 @@
 }
 
 .learning-task-card {
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  border-radius: 6px;
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-sm);
   padding: 0.65rem 0.85rem;
   font-size: 0.825rem;
-  color: #1e3a8a;
+  color: var(--text-main);
   line-height: 1.4;
 }
 
@@ -626,9 +626,9 @@
 .prep-mastery-strip {
   display: flex;
   gap: 1rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: var(--radius-md, 8px);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
   justify-content: space-around;
   text-align: center;
@@ -637,20 +637,20 @@
 .mastery-stat-item h5 {
   font-size: 1.35rem;
   font-weight: 800;
-  color: var(--text-main, #0f172a);
+  color: var(--text-main);
 }
 
 .mastery-stat-item p {
   font-size: 0.75rem;
-  color: var(--text-secondary, #475569);
+  color: var(--text-secondary);
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .resume-session-banner {
-  background: linear-gradient(135deg, #eff6ff, #f5f3ff);
-  border: 1px solid #c7d2fe;
-  border-radius: var(--radius-md, 8px);
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
   padding: 0.85rem 1rem;
   display: flex;
   justify-content: space-between;
@@ -666,21 +666,22 @@
 }
 
 .rec-card {
-  background: var(--bg-surface, #ffffff);
-  border: 1px solid var(--border-card, #e2e8f0);
-  border-radius: var(--radius-lg, 12px);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
   padding: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 0.85rem;
-  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.05));
-  transition: transform var(--transition-fast, 0.2s ease), box-shadow var(--transition-fast, 0.2s ease);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .rec-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md, 0 4px 6px rgba(0, 0, 0, 0.08));
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-border);
 }
 
 .rec-card-top {
@@ -692,25 +693,39 @@
 .rec-priority-badge {
   align-self: flex-start;
   padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-full, 999px);
+  border-radius: var(--radius-full);
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.rec-priority-badge.high { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
-.rec-priority-badge.medium { background: #fffbeb; color: #b45309; border: 1px solid #fef3c7; }
-.rec-priority-badge.low { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.rec-priority-badge.high {
+  background: var(--danger-light);
+  color: var(--danger-text);
+  border: 1px solid var(--danger-border);
+}
+
+.rec-priority-badge.medium {
+  background: var(--warning-light);
+  color: var(--warning-text);
+  border: 1px solid var(--warning-border);
+}
+
+.rec-priority-badge.low {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+}
 
 .rec-card-title {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--text-main, #0f172a);
+  color: var(--text-main);
 }
 
 .rec-card-desc {
   font-size: 0.825rem;
-  color: var(--text-secondary, #475569);
+  color: var(--text-secondary);
   line-height: 1.45;
 }
 
@@ -720,16 +735,18 @@
   justify-content: center;
   gap: 0.35rem;
   padding: 0.5rem 0.9rem;
-  background: var(--primary, #2563eb);
+  background: var(--primary);
   color: #ffffff;
-  border-radius: var(--radius-md, 8px);
+  border-radius: var(--radius-md);
   font-size: 0.825rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--transition-fast, 0.2s ease);
+  transition: background var(--transition-fast), transform var(--transition-fast);
 }
 
 .rec-action-btn:hover {
-  background: #1d4ed8;
+  background: var(--primary-hover);
+  transform: translateY(-1px);
 }
+

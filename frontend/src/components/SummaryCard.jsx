@@ -4,9 +4,9 @@ export default function SummaryCard({
   title,
   value = 0,
   icon: Icon,
-  iconBg = '#eef2ff',
-  iconColor = '#4f46e5',
-  tagText = 'Day 1 Initialized',
+  iconBg = 'var(--primary-light)',
+  iconColor = 'var(--primary)',
+  tagText = 'Active',
   subtext = '0 records recorded'
 }) {
   return (

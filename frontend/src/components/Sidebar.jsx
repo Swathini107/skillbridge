@@ -10,6 +10,7 @@ import {
   FileText,
   X
 } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   {
@@ -99,6 +100,7 @@ export default function Sidebar({ isOpen, onClose }) {
               <p>Career Readiness Platform</p>
             </div>
           </div>
+          <ThemeToggle className="sidebar-theme-toggle" />
         </div>
       </aside>
     </>

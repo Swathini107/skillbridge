@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Menu } from 'lucide-react';
 import { fetchHealth } from '../services/api';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar({ onToggleMenu, currentTitle = 'Student Career Dashboard' }) {
   const [healthStatus, setHealthStatus] = useState({
@@ -64,11 +65,13 @@ export default function Navbar({ onToggleMenu, currentTitle = 'Student Career Da
         </button>
         <div className="page-title-crumb">
           <span>{currentTitle}</span>
-          <span className="crumb-tag">Day 1</span>
         </div>
       </div>
 
       <div className="navbar-right">
+        {/* Color Theme Switcher (Green Theme: Light & Dark Mode) */}
+        <ThemeToggle />
+
         {/* Live Backend Health Indicator */}
         <div
           className={`health-badge ${

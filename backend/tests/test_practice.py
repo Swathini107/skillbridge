@@ -1,5 +1,5 @@
 """
-SkillBridge Day 5 Test Suite - Mock Interview Practice Studio
+SkillBridge Test Suite - Mock Interview Practice Studio
 Comprehensive verification covering:
 1. Previewing a practice session before starting
 2. Creating a Technical practice session
@@ -15,7 +15,7 @@ Comprehensive verification covering:
 12. Practice history listing with accurate counts and average scores
 13. Non-mutation guarantee (deleting a session preserves original jobs and questions)
 14. Including custom manual question in practice session
-15. Regression testing Day 2 (Job Saver), Day 3 (Analyzer), and Day 4 (Memory Bank)
+15. Regression testing Job Saver, Analyzer, and Memory Bank
 """
 
 import os
@@ -28,7 +28,7 @@ BASE_URL = os.getenv("TEST_API_URL", "http://127.0.0.1:8000/api")
 
 
 class TestMockInterviewPracticeStudio(unittest.TestCase):
-    """End-to-end API integration and validation test suite for Day 5 Practice Studio."""
+    """End-to-end API integration and validation test suite for Practice Studio."""
 
     def make_request(self, endpoint, method="GET", data=None):
         url = f"{BASE_URL}{endpoint}"
@@ -499,14 +499,14 @@ class TestMockInterviewPracticeStudio(unittest.TestCase):
         self.assertIn("Tortoise and Hare", first_ans["question_text"])
         self.assertEqual(first_ans["question_id"], None)  # Source is custom manual question
 
-    def test_15_day2_day3_day4_regression(self):
-        """15. Regression test: Day 2 jobs, Day 3 analyzer, and Day 4 questions remain fully functional."""
-        # Day 2 Applications
+    def test_15_regression_existing_modules(self):
+        """15. Regression test: Saved jobs, analyzer, and questions remain fully functional."""
+        # Job Applications
         status, app_stats = self.make_request("/applications/stats")
         self.assertEqual(status, 200)
         self.assertIn("total_jobs", app_stats)
 
-        # Day 3 Analyzer
+        # Job Analyzer
         status, analysis = self.make_request("/analyzer/analyze", method="POST", data={
             "job_description": "We need a React and Node.js developer with PostgreSQL expertise.",
             "candidate_profile": "Built applications using React and PostgreSQL."
@@ -515,7 +515,7 @@ class TestMockInterviewPracticeStudio(unittest.TestCase):
         self.assertIn("match_score", analysis)
         self.assertIn("missing_skills", analysis)
 
-        # Day 4 Questions
+        # Interview Questions
         status, q_stats = self.make_request("/questions/stats")
         self.assertEqual(status, 200)
         self.assertIn("total", q_stats)

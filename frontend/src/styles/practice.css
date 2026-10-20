@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SkillBridge — Day 5: Mock Interview Practice Studio Stylesheet
+   SkillBridge — Mock Interview Practice Studio Stylesheet
    ========================================================================== */
 
 /* Main Page Container */
@@ -310,21 +310,21 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.85rem 1.25rem;
-  background: var(--primary, #2563eb);
+  background: var(--primary);
   color: #ffffff;
   border: none;
-  border-radius: var(--radius-md, 8px);
+  border-radius: var(--radius-md);
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all var(--transition-fast, 0.2s ease);
-  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+  transition: all var(--transition-fast);
+  box-shadow: 0 2px 4px var(--primary-glow);
 }
 
 .start-session-btn:hover:not(:disabled) {
-  background: #1d4ed8;
+  background: var(--primary-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.35);
+  box-shadow: 0 4px 6px var(--primary-glow);
 }
 
 .start-session-btn:disabled {
@@ -624,19 +624,19 @@
   padding: 1rem;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: var(--text-main, #0f172a);
-  background: #ffffff;
-  border: 1px solid var(--border-color, #cbd5e1);
-  border-radius: var(--radius-md, 8px);
+  color: var(--text-main);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   resize: vertical;
   font-family: inherit;
-  transition: border-color var(--transition-fast, 0.2s ease), box-shadow var(--transition-fast, 0.2s ease);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .answer-textarea:focus {
   outline: none;
-  border-color: var(--primary, #2563eb);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
 .editor-bottom-bar {

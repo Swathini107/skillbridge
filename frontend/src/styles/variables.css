@@ -1,12 +1,22 @@
-:root {
-  /* Color Palette - Modern Indigo & Slate Theme */
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #eef2ff;
-  --primary-glow: rgba(79, 70, 229, 0.15);
+:root,
+[data-theme="light"] {
+  /* ==========================================================================
+     GREEN THEME: LIGHT MODE (Emerald & Fresh Sage Palette)
+     ========================================================================== */
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-active: #065f46;
+  --primary-light: #ecfdf5;
+  --primary-glow: rgba(5, 150, 105, 0.18);
+  --primary-border: #a7f3d0;
 
-  --secondary: #0ea5e9;
-  --secondary-light: #f0f9ff;
+  --secondary: #0d9488;
+  --secondary-hover: #0f766e;
+  --secondary-light: #f0fdfa;
+  --secondary-glow: rgba(13, 148, 136, 0.18);
+
+  --accent: #10b981;
+  --accent-light: #d1fae5;
 
   --success: #10b981;
   --success-light: #ecfdf5;
@@ -14,27 +24,44 @@
 
   --warning: #f59e0b;
   --warning-light: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #92400e;
 
-  --purple: #8b5cf6;
-  --purple-light: #f5f3ff;
+  --danger: #ef4444;
+  --danger-light: #fef2f2;
+  --danger-border: #fecaca;
+  --danger-text: #991b1b;
 
-  /* Neutrals */
-  --bg-app: #f8fafc;
+  --info: #0284c7;
+  --info-light: #f0f9ff;
+  --info-border: #bae6fd;
+  --info-text: #0369a1;
+
+  --purple: #059669;
+  --purple-light: #ecfdf5;
+
+  /* Surfaces & Backgrounds - Light Mode */
+  --bg-app: #f4f8f5;
   --bg-surface: #ffffff;
-  --bg-subtle: #f1f5f9;
-  --bg-sidebar: #0f172a;
-  --bg-sidebar-hover: #1e293b;
-  --bg-sidebar-active: #334155;
+  --bg-surface-elevated: #ffffff;
+  --bg-subtle: #ebf3ee;
+  --bg-hover: #e1ede5;
+  --bg-sidebar: #061810;
+  --bg-sidebar-hover: #0d281c;
+  --bg-sidebar-active: #143828;
 
-  --text-main: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
-  --text-light: #94a3b8;
+  /* Typography & Text */
+  --text-main: #0a1c13;
+  --text-secondary: #274235;
+  --text-muted: #4e6b5c;
+  --text-light: #7e9c8e;
   --text-white: #ffffff;
 
-  --border-subtle: #e2e8f0;
-  --border-card: #e2e8f0;
-  --border-dark: #334155;
+  /* Borders & Dividers */
+  --border-subtle: #d6e4dc;
+  --border-card: #d6e4dc;
+  --border-dark: #143828;
+  --border-focus: #10b981;
 
   /* Typography */
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -43,11 +70,11 @@
   --sidebar-width: 260px;
   --header-height: 70px;
 
-  /* Shadows */
+  /* Shadows - Organic Depth with Soft Emerald Tint */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(6, 78, 59, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(6, 78, 59, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(6, 78, 59, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
 
   /* Border Radii */
   --radius-sm: 6px;
@@ -59,4 +86,88 @@
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Banner & Brand Gradients */
+  --banner-bg: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #047857 100%);
+  --banner-glow: radial-gradient(circle, rgba(52, 211, 153, 0.35) 0%, rgba(52, 211, 153, 0) 70%);
+  --banner-text-subtle: #a7f3d0;
+  --brand-gradient: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+[data-theme="dark"],
+.dark {
+  /* ==========================================================================
+     GREEN THEME: DARK MODE (Luminous Emerald & Midnight Obsidian)
+     ========================================================================== */
+  --primary: #10b981;
+  --primary-hover: #34d399;
+  --primary-active: #059669;
+  --primary-light: rgba(16, 185, 129, 0.16);
+  --primary-glow: rgba(16, 185, 129, 0.32);
+  --primary-border: rgba(16, 185, 129, 0.35);
+
+  --secondary: #14b8a6;
+  --secondary-hover: #2dd4bf;
+  --secondary-light: rgba(20, 184, 166, 0.16);
+  --secondary-glow: rgba(20, 184, 166, 0.28);
+
+  --accent: #34d399;
+  --accent-light: rgba(52, 211, 153, 0.16);
+
+  --success: #34d399;
+  --success-light: rgba(52, 211, 153, 0.16);
+  --success-glow: rgba(52, 211, 153, 0.25);
+
+  --warning: #fbbf24;
+  --warning-light: rgba(251, 191, 36, 0.15);
+  --warning-border: rgba(251, 191, 36, 0.3);
+  --warning-text: #fde047;
+
+  --danger: #f87171;
+  --danger-light: rgba(248, 113, 113, 0.15);
+  --danger-border: rgba(248, 113, 113, 0.3);
+  --danger-text: #fca5a5;
+
+  --info: #38bdf8;
+  --info-light: rgba(56, 189, 248, 0.15);
+  --info-border: rgba(56, 189, 248, 0.3);
+  --info-text: #7dd3fc;
+
+  --purple: #34d399;
+  --purple-light: rgba(52, 211, 153, 0.16);
+
+  /* Surfaces & Backgrounds - Dark Mode */
+  --bg-app: #070e0a;
+  --bg-surface: #0e1813;
+  --bg-surface-elevated: #14231b;
+  --bg-subtle: #132219;
+  --bg-hover: #1a2e23;
+  --bg-sidebar: #040806;
+  --bg-sidebar-hover: #0b1710;
+  --bg-sidebar-active: #13261b;
+
+  /* Typography & Text - Dark Mode */
+  --text-main: #f0fdf4;
+  --text-secondary: #cbe0d4;
+  --text-muted: #7f9e8e;
+  --text-light: #506e60;
+  --text-white: #ffffff;
+
+  /* Borders & Dividers - Dark Mode */
+  --border-subtle: #182c20;
+  --border-card: #1d3427;
+  --border-dark: #244231;
+  --border-focus: #34d399;
+
+  /* Shadows - Deep Obsidian with Luminous Mint Ambient */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 8px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 20px -3px rgba(0, 0, 0, 0.8), 0 0 15px rgba(16, 185, 129, 0.06);
+  --shadow-xl: 0 20px 30px -5px rgba(0, 0, 0, 0.9), 0 0 25px rgba(16, 185, 129, 0.1);
+
+  /* Banner & Brand Gradients */
+  --banner-bg: linear-gradient(135deg, #03251c 0%, #064e3b 50%, #065f46 100%);
+  --banner-glow: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, rgba(16, 185, 129, 0) 70%);
+  --banner-text-subtle: #6ee7b7;
+  --brand-gradient: linear-gradient(135deg, #059669 0%, #34d399 100%);
 }

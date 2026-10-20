@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Interview Questions Memory Bank (Day 4) Stylesheet
+   Interview Questions Memory Bank Stylesheet
    ========================================================================== */
 
 /* Top Header & Stats Section */
@@ -252,9 +252,9 @@
 
 /* Round Badge Colors */
 .badge-round-technical {
-  background: #eef2ff;
-  color: #4f46e5;
-  border: 1px solid #c7d2fe;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
 }
 
 .badge-round-hr {
@@ -671,3 +671,65 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .badge-round-technical {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+[data-theme="dark"] .badge-round-hr {
+  background: rgba(16, 185, 129, 0.18);
+  color: #a7f3d0;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+[data-theme="dark"] .badge-round-behavioral {
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+[data-theme="dark"] .badge-round-system-design {
+  background: rgba(20, 184, 166, 0.18);
+  color: #5eead4;
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+[data-theme="dark"] .badge-round-aptitude {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fde047;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .badge-diff-beginner {
+  background: rgba(52, 211, 153, 0.18);
+  color: #6ee7b7;
+}
+
+[data-theme="dark"] .badge-diff-intermediate {
+  background: rgba(14, 165, 233, 0.18);
+  color: #7dd3fc;
+}
+
+[data-theme="dark"] .badge-diff-advanced {
+  background: rgba(244, 63, 94, 0.18);
+  color: #fda4af;
+}
+
+[data-theme="dark"] .badge-status-new {
+  background: var(--bg-subtle);
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .badge-status-learning {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fde047;
+}
+
+[data-theme="dark"] .badge-status-confident {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+}
+

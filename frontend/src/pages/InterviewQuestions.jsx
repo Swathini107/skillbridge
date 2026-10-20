@@ -268,7 +268,7 @@ export default function InterviewQuestions() {
       {/* Summary Preparation Stats Bar */}
       <div className="questions-stats-grid">
         <div className="q-stat-card">
-          <div className="q-stat-icon" style={{ background: '#eef2ff', color: '#4f46e5' }}>
+          <div className="q-stat-icon" style={{ background: 'var(--primary-light)', color: 'var(--primary)' }}>
             <HelpCircle size={22} />
           </div>
           <div className="q-stat-info">

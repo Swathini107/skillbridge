@@ -1,5 +1,5 @@
 """
-SkillBridge Day 4 Test Suite - Interview Memory Bank
+SkillBridge Test Suite - Interview Memory Bank
 Comprehensive verification covering:
 1. Technical and HR question creation (201 Created)
 2. Question creation with all optional fields
@@ -11,7 +11,7 @@ Comprehensive verification covering:
 8. Linking question to a saved job application
 9. Job non-mutation guarantee (editing/deleting question preserves job status and data)
 10. Input validation errors (empty text, short text, invalid choices return HTTP 422)
-11. Regression tests for Day 2 Application Tracker and Day 3 Job Analyzer
+11. Regression tests for Application Tracker and Job Analyzer
 """
 
 import os
@@ -24,7 +24,7 @@ BASE_URL = os.getenv("TEST_API_URL", "http://127.0.0.1:8000/api")
 
 
 class TestInterviewMemoryBank(unittest.TestCase):
-    """End-to-end API integration and validation test suite for Day 4"""
+    """End-to-end API integration and validation test suite for Interview Memory Bank"""
 
     def make_request(self, endpoint, method="GET", data=None):
         url = f"{BASE_URL}{endpoint}"
@@ -354,13 +354,13 @@ class TestInterviewMemoryBank(unittest.TestCase):
             self.assertEqual(e.code, 422)
 
     def test_11_day_2_applications_and_day_3_analyzer_regression(self):
-        """11. Verify that Day 2 tracker and Day 3 analyzer continue to function"""
-        # Day 2 Application Stats
+        """11. Verify that application tracker and job analyzer continue to function"""
+        # Job Application Stats
         status, app_stats = self.make_request("/applications/stats", method="GET")
         self.assertEqual(status, 200)
         self.assertIn("total_jobs", app_stats)
 
-        # Day 3 Job Analyzer
+        # Job Analyzer
         analyzer_payload = {
             "job_description": "We are seeking a React and Python developer with Git skills.",
             "resume_or_profile_text": "Proficient in React and Git.",

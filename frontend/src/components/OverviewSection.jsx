@@ -10,8 +10,8 @@ import {
 const pillars = [
   {
     badge: 'Module 2 & 6',
-    badgeBg: '#eef2ff',
-    badgeColor: '#4f46e5',
+    badgeBg: 'var(--primary-light)',
+    badgeColor: 'var(--primary)',
     title: 'Track Applications',
     description:
       'Organize your job search in a structured pipeline. Never miss follow-up deadlines, interview dates, or offer windows.',
@@ -24,8 +24,8 @@ const pillars = [
   },
   {
     badge: 'Module 1 & 5',
-    badgeBg: '#f0f9ff',
-    badgeColor: '#0284c7',
+    badgeBg: 'var(--secondary-light)',
+    badgeColor: 'var(--secondary)',
     title: 'Identify Skill Gaps',
     description:
       'Analyze job descriptions to discover key competencies, domain keywords, and technologies required by hiring teams.',
@@ -38,8 +38,8 @@ const pillars = [
   },
   {
     badge: 'Module 3 & 4',
-    badgeBg: '#faf5ff',
-    badgeColor: '#9333ea',
+    badgeBg: 'var(--primary-light)',
+    badgeColor: 'var(--primary)',
     title: 'Prepare for Interviews',
     description:
       'Build confidence through systematic practice of company-specific technical and behavioral questions.',
@@ -52,14 +52,13 @@ const pillars = [
   }
 ];
 
-const days = [
-  { day: 'Day 1', name: 'Foundation & UI', active: false, done: true },
-  { day: 'Day 2', name: 'App Tracker', active: false, done: true },
-  { day: 'Day 3', name: 'JD Analyzer', active: false, done: true },
-  { day: 'Day 4', name: 'Question Bank', active: true, done: false },
-  { day: 'Day 5', name: 'Practice Studio', active: false },
-  { day: 'Day 6', name: 'Recommendations', active: false },
-  { day: 'Day 7', name: 'Polish & Review', active: false }
+const modules = [
+  { step: 'Module 1', name: 'App Tracker', active: false, done: true },
+  { step: 'Module 2', name: 'JD Analyzer', active: false, done: true },
+  { step: 'Module 3', name: 'Question Bank', active: false, done: true },
+  { step: 'Module 4', name: 'Practice Studio', active: false, done: true },
+  { step: 'Module 5', name: 'Resume Builder', active: false, done: true },
+  { step: 'Module 6', name: 'Career Dashboard', active: true, done: true }
 ];
 
 export default function OverviewSection() {
@@ -106,15 +105,15 @@ export default function OverviewSection() {
         })}
       </div>
 
-      {/* 7-Day Roadmap Strip */}
+      {/* Integrated Modules Roadmap Strip */}
       <div className="roadmap-strip" style={{ marginTop: '1.5rem' }}>
         <div className="roadmap-header">
           <div>
             <h3 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-main)' }}>
-              7-Day Development Roadmap
+              Integrated Career Preparation Workflow
             </h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              Currently in Day 4: Interview Memory Bank & Practice Repository.
+              Full student career workflow connecting job discovery, skill targeting, mock rounds, and resumes.
             </p>
           </div>
           <div
@@ -131,17 +130,17 @@ export default function OverviewSection() {
             }}
           >
             <CalendarDays size={14} />
-            <span>Sprint 1 / Day 4</span>
+            <span>Integrated Platform</span>
           </div>
         </div>
 
         <div className="roadmap-steps">
-          {days.map((item) => (
+          {modules.map((item) => (
             <div
-              key={item.day}
+              key={item.step}
               className={`roadmap-step ${item.active ? 'active' : ''}`}
             >
-              <div className="roadmap-step-day">{item.day}</div>
+              <div className="roadmap-step-day">{item.step}</div>
               <div className="roadmap-step-name">{item.name}</div>
             </div>
           ))}

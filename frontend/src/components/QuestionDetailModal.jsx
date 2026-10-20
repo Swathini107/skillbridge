@@ -153,7 +153,7 @@ export default function QuestionDetailModal({
           {/* Section 1: Original Answer Notes */}
           <div className="detail-section-card">
             <div className="detail-section-header">
-              <span className="detail-section-icon" style={{ background: '#eef2ff', color: '#4f46e5' }}>
+              <span className="detail-section-icon" style={{ background: 'var(--primary-light)', color: 'var(--primary)' }}>
                 <BookOpen size={15} />
               </span>
               <h4>My Original Answer & Response Notes</h4>

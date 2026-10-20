@@ -1,6 +1,6 @@
 """
-SkillBridge — Day 5: Mock Interview Practice Studio Service
-Handles question selection, personalization matching based on saved jobs and Day 3 analyses,
+SkillBridge — Mock Interview Practice Studio Service
+Handles question selection, personalization matching based on saved jobs and job analyses,
 session lifecycle, and transparent performance report generation.
 """
 
@@ -87,7 +87,7 @@ def select_practice_questions(
     Select and rank questions for a practice session using SkillBridge data.
     Incorporates:
     - Saved job details (company, role, description, skills)
-    - Day 3 analysis gaps (missing required and preferred skills)
+    - Job analysis gaps (missing required and preferred skills)
     - Difficulty and round constraints
     - Custom manual question if provided
     Never duplicates questions merely to satisfy requested count.

@@ -221,7 +221,7 @@ class InterviewQuestionRead(InterviewQuestionBase):
     model_config = ConfigDict(from_attributes=True)
 
 
-# --- Job Description Analyzer Schemas (Day 3) ---
+# --- Job Description Analyzer Schemas ---
 class AnalyzeRequest(BaseModel):
     job_description: str = Field(..., max_length=50000)
     resume_or_profile_text: Optional[str] = Field(None, max_length=50000)
@@ -281,7 +281,7 @@ class AnalysisHistoryItem(BaseModel):
 
 
 # ============================================================================
-# INTERVIEW MEMORY BANK SCHEMAS (DAY 4)
+# INTERVIEW MEMORY BANK SCHEMAS
 # ============================================================================
 
 VALID_ROUND_TYPES = ["Technical", "HR", "Aptitude", "Behavioral", "System Design"]
@@ -502,7 +502,7 @@ class QuestionStatsResponse(BaseModel):
 
 
 # ============================================================================
-# DAY 5: MOCK INTERVIEW PRACTICE STUDIO SCHEMAS
+# MOCK INTERVIEW PRACTICE STUDIO SCHEMAS
 # ============================================================================
 
 VALID_PRACTICE_ROUNDS = ["Technical", "HR", "Aptitude", "Behavioral", "System Design"]
@@ -786,7 +786,7 @@ class PracticeSessionReport(BaseModel):
 
 
 # ============================================================================
-# DAYS 6 & 7: UNIFIED CAREER PREPARATION DASHBOARD SCHEMAS
+# UNIFIED CAREER PREPARATION DASHBOARD SCHEMAS
 # ============================================================================
 
 class DashboardSummaryCards(BaseModel):

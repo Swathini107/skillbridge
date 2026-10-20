@@ -134,7 +134,7 @@ export async function deleteAnalysis(id) {
 }
 
 // ============================================================================
-// 13. INTERVIEW MEMORY BANK (DAY 4)
+// 13. INTERVIEW MEMORY BANK
 // ============================================================================
 
 export async function getQuestions(params = {}) {
@@ -190,7 +190,7 @@ export async function deleteQuestion(id) {
 }
 
 // ============================================================================
-// 14. MOCK INTERVIEW PRACTICE STUDIO (DAY 5)
+// 14. MOCK INTERVIEW PRACTICE STUDIO
 // ============================================================================
 
 export async function previewPracticeSession(payload) {
@@ -261,7 +261,7 @@ export async function deletePracticeSession(sessionId) {
 }
 
 // ============================================================================
-// 15. UNIFIED DASHBOARD (DAYS 6 & 7)
+// 15. UNIFIED DASHBOARD
 // ============================================================================
 
 export async function getDashboardSummary() {

@@ -1,5 +1,6 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import './styles/index.css';
@@ -41,13 +42,13 @@ function RouteLoadingFallback() {
       justifyContent: 'center',
       minHeight: '50vh',
       gap: '12px',
-      color: '#64748b'
+      color: 'var(--text-muted)'
     }}>
       <div style={{
         width: '32px',
         height: '32px',
-        border: '3px solid #e2e8f0',
-        borderTopColor: '#4f46e5',
+        border: '3px solid var(--border-subtle)',
+        borderTopColor: 'var(--primary)',
         borderRadius: '50%',
         animation: 'spin 0.8s linear infinite'
       }} />
@@ -106,8 +107,10 @@ function AppContent() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <AppContent />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }

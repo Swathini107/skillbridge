@@ -8,8 +8,8 @@ const actions = [
     description: 'Add new job postings to track application deadlines and status.',
     targetPath: '/applications',
     icon: BookmarkPlus,
-    iconBg: '#eef2ff',
-    iconColor: '#4f46e5',
+    iconBg: 'var(--primary-light)',
+    iconColor: 'var(--primary)',
     ctaText: 'Open Application Tracker',
     isAddJob: true
   },
@@ -18,8 +18,8 @@ const actions = [
     description: 'Extract must-have technical skills, keywords, and qualifications.',
     targetPath: '/job-analyzer',
     icon: FileSearch,
-    iconBg: '#f0f9ff',
-    iconColor: '#0284c7',
+    iconBg: 'var(--secondary-light)',
+    iconColor: 'var(--secondary)',
     ctaText: 'Open Job Analyzer'
   },
   {
@@ -27,8 +27,8 @@ const actions = [
     description: 'Record and organize questions encountered in technical and HR rounds.',
     targetPath: '/questions',
     icon: Mic2,
-    iconBg: '#faf5ff',
-    iconColor: '#9333ea',
+    iconBg: 'var(--primary-light)',
+    iconColor: 'var(--primary)',
     ctaText: 'Open Question Bank'
   },
   {
@@ -36,8 +36,8 @@ const actions = [
     description: 'Practice role-specific interview rounds with timer and structured self-review.',
     targetPath: '/practice',
     icon: Mic,
-    iconBg: '#eff6ff',
-    iconColor: '#2563eb',
+    iconBg: 'var(--secondary-light)',
+    iconColor: 'var(--secondary)',
     ctaText: 'Start Mock Interview'
   }
 ];

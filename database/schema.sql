@@ -1,5 +1,5 @@
 -- SkillBridge Database Schema (SQLite compatible)
--- Day 2: Job Saver & Application Tracker Enhanced Schema
+-- Job Saver & Application Tracker Enhanced Schema
 
 PRAGMA foreign_keys = ON;
 
@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS job_applications (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
 
--- 3. Interview Questions Table (Day 4: Interview Memory Bank)
+-- 3. Interview Questions Table (Interview Memory Bank)
 -- Stores real questions encountered by students, original answers, improvement notes, and review status
 CREATE TABLE IF NOT EXISTS interview_questions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -106,7 +106,7 @@ CREATE INDEX IF NOT EXISTS idx_interview_questions_company ON interview_question
 CREATE INDEX IF NOT EXISTS idx_interview_questions_topic ON interview_questions(topic);
 CREATE INDEX IF NOT EXISTS idx_interview_questions_job_id ON interview_questions(job_id);
 
--- 4. Job Analyses Table (Day 3 Feature)
+-- 4. Job Analyses Table (Job Description Analyzer)
 -- Stores persistent job description analysis history, score breakdowns, and skill gaps
 CREATE TABLE IF NOT EXISTS job_analyses (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -132,7 +132,7 @@ CREATE INDEX IF NOT EXISTS idx_job_analyses_user_id ON job_analyses(user_id);
 CREATE INDEX IF NOT EXISTS idx_job_analyses_job_id ON job_analyses(job_id);
 CREATE INDEX IF NOT EXISTS idx_job_analyses_created_at ON job_analyses(created_at);
 
--- 5. Practice Sessions Table (Day 5: Mock Interview Practice Studio)
+-- 5. Practice Sessions Table (Mock Interview Practice Studio)
 -- Stores setup parameters, time limits, duration, status, and progress for mock interviews
 CREATE TABLE IF NOT EXISTS practice_sessions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -170,7 +170,7 @@ CREATE INDEX IF NOT EXISTS idx_practice_sessions_status ON practice_sessions(sta
 CREATE INDEX IF NOT EXISTS idx_practice_sessions_round ON practice_sessions(round_type);
 CREATE INDEX IF NOT EXISTS idx_practice_sessions_created ON practice_sessions(created_at);
 
--- 6. Practice Answers Table (Day 5: Mock Interview Practice Studio)
+-- 6. Practice Answers Table (Mock Interview Practice Studio)
 -- Stores question snapshots, student responses, self-assessment criteria ratings, and reflections
 CREATE TABLE IF NOT EXISTS practice_answers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

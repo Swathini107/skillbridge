@@ -217,7 +217,6 @@ export default function JobAnalyzer() {
         <div className="analyzer-title-group">
           <h1>
             <span>Job Description Analyzer</span>
-            <span className="count-pill">Day 3 Active</span>
           </h1>
           <p>
             Extract technical requirements, compare against your skill profile, and uncover actionable learning priorities.

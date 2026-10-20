@@ -1,11 +1,11 @@
 """
-SkillBridge Day 3 Test Suite - Job Description Analyzer
+SkillBridge Test Suite - Job Description Analyzer
 Covers:
 1. Unit tests for analyze_job_and_profile (6 representative scenarios, aliases, boundaries, scoring)
 2. API integration tests (Analyze endpoint, History listing, Detail, Delete)
 3. Validation tests (short description, empty fields)
 4. Saved job non-mutation (analyzing a saved job preserves description and status)
-5. Day 2 regression (jobs listing, add, update, delete)
+5. Application Tracker regression (jobs listing, add, update, delete)
 """
 
 import os
@@ -315,7 +315,7 @@ class TestAnalyzerAPIIntegration(unittest.TestCase):
             self.make_request(f"/analyzer/history/{analysis['id']}", method="DELETE")
 
     def test_day_2_applications_crud_regression(self):
-        """Verify Day 2 Application Tracker functions continue to work flawlessly"""
+        """Verify Application Tracker functions continue to work flawlessly"""
         # Test Create
         new_app = {
             "company_name": "TestCorp Regression",

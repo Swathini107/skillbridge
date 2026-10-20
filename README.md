@@ -65,7 +65,7 @@ graph TD
 
 ## 3. Core Modules & Capabilities
 
-### Module 1: Unified Career Preparation Dashboard (Days 6 & 7)
+### Module 1: Unified Career Preparation Dashboard
 - **Live Summary Metrics**: Real-time cards calculating total saved jobs, submitted applications, active interviews, offers received, upcoming deadlines, saved questions, confident mastery count, and completed mock interview sessions.
 - **Application Funnel**: Visual pipeline categorizing active opportunities (`Saved` ➔ `Applied` ➔ `Assessment` ➔ `Interview` ➔ `Offer`) while properly separating final outcomes (`Rejected`, `Withdrawn`). Interactive bars navigate directly to pre-filtered job views.
 - **Urgent Deadlines Tracker**: Chronologically sorted list of approaching deadlines with explicit badges (`Overdue`, `Urgent: ≤ 3 days`, `Approaching: ≤ 7 days`).
@@ -73,14 +73,14 @@ graph TD
 - **Interview Preparation Overview**: Displays question review status breakdown (`New`, `Learning`, `Confident`), recent mock session outcomes, unmastered topics, and direct actions to resume in-progress sessions.
 - **Recommended Next Steps**: Deterministic, rule-driven action engine that analyzes saved records to generate high-priority next actions (e.g., analyze unanalyzed jobs, review questions for upcoming interviews, practice missing required skills).
 
-### Module 2: Job Saver & Application Tracker (Day 2)
+### Module 2: Job Saver & Application Tracker
 - **Full CRUD Management**: Add, update, view, and delete job opportunities.
 - **Dual View Modes**: Switch seamlessly between interactive Kanban Board view and sortable Data Table view.
 - **Recruitment Lifecycle**: Track progression across 7 distinct stages: `Saved`, `Applied`, `Assessment`, `Interview`, `Offer`, `Rejected`, `Withdrawn`.
 - **Search & Filtering**: Search across company, job title, and notes; filter by stage, work arrangement (`On-site`, `Hybrid`, `Remote`), and employment type (`Full-time`, `Internship`, `Part-time`).
 - **Deep Integrations**: Direct buttons on every job card to trigger JD analysis, view logged interview questions, or launch a company-targeted mock interview.
 
-### Module 3: Job Description Analyzer & Skill Matcher (Day 3)
+### Module 3: Job Description Analyzer & Skill Matcher
 - **Transparent Rule-Based Extraction**: Deterministic dictionary of 100+ modern industry skills spanning Programming, Frontend, Backend, Databases, Cloud/DevOps, AI/ML, and Mobile.
 - **Alias Resolution**: Automatically normalizes synonyms (e.g., `JS` ➔ `JavaScript`, `React.js` ➔ `React`, `Postgres` ➔ `PostgreSQL`, `k8s` ➔ `Kubernetes`).
 - **Requirement Segmentation**: Intelligently parses section headers to categorize skills into **Required** vs. **Preferred (Bonus)**.
@@ -89,14 +89,14 @@ graph TD
 - **Prioritized Learning Checklist**: Converts detected skill gaps into actionable project recommendations with learning topics.
 - **Persistent History**: View past analyses, inspect detailed skill breakdowns, and revisit recommendations at any time without mutating underlying job data.
 
-### Module 4: Interview Memory Bank (Day 4)
+### Module 4: Interview Memory Bank
 - **Categorized Question Repository**: Organize questions by Round Type (`Technical`, `HR`, `Behavioral`, `System Design`, `Aptitude`) and Difficulty (`Beginner`, `Intermediate`, `Advanced`).
 - **Personal Reflection Capture**: Record personal answers, expected answers, and post-interview improvement notes.
 - **Mastery Review Status**: Mark questions as `New`, `Learning`, or `Confident` with quick status dropdowns.
 - **Opportunity Association**: Link questions directly to tracked jobs with company name and job role badges.
 - **Cross-Module Deep Linking**: Click "Practice in Mock Studio" on any question to launch an instant practice drill.
 
-### Module 5: Mock Interview Practice Studio (Day 5)
+### Module 5: Mock Interview Practice Studio
 - **Customized Session Setup**: Configure practice sessions by Round Type, Difficulty, Question Count (5, 10, 15), and optional Countdown Timer (5, 10, 15, 20 mins).
 - **Targeted Personalization**: Link sessions to saved jobs to automatically pull relevant company questions and target missing skills identified by the analyzer.
 - **Live Practice Runner**: Clean, distraction-free interface with keyboard navigation, live countdown timer, autosave, and question skipping.
